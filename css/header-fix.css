@@ -1,0 +1,130 @@
+/* Стили для улучшения шапки сайта */
+
+/* Делаем шапку более узкой */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#site-header-inner {
+    max-width: 1140px;
+    padding: 0 15px;
+}
+
+/* Улучшаем стиль логотипа */
+#site-logo {
+    margin-top: 0;
+}
+
+#site-logo .logo-text {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Улучшаем верхнюю панель */
+#top-bar {
+    padding: 8px 0;
+}
+
+.top-bar-content .content {
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+/* Улучшаем навигацию */
+#main-nav {
+    margin-right: 0;
+}
+
+#main-nav > ul > li > a {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* Адаптивность для шапки */
+@media (max-width: 1200px) {
+    .container, #site-header-inner {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container, #site-header-inner {
+        max-width: 720px;
+    }
+    
+    #site-logo {
+        margin-top: 0;
+    }
+    
+    #site-logo .logo-text {
+        font-size: 20px;
+    }
+    
+    #main-nav > ul > li > a {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container, #site-header-inner {
+        max-width: 540px;
+    }
+    
+    #site-header {
+        padding: 10px 0;
+    }
+    
+    #site-logo .logo-text {
+        font-size: 18px;
+    }
+    
+    .top-bar-content .inner {
+        justify-content: center;
+    }
+    
+    .top-bar-inner-wrap {
+        flex-direction: column;
+    }
+    
+    .top-bar-socials {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    #site-logo .logo-text {
+        font-size: 16px;
+    }
+    
+    .top-bar-content .content {
+        margin-right: 8px;
+        font-size: 0.8rem;
+    }
+    
+    .top-bar-socials .icons a {
+        margin-left: 10px;
+    }
+}
+
+/* Исправляем отображение языковых кнопок */
+.lang-btn {
+    padding: 4px 10px;
+    font-size: 13px;
+}
+
+.menu-item.language-menu {
+    margin-left: 10px;
+}
+
+.lang-separator {
+    margin: 0 5px;
+}
+
+/* Улучшаем мобильное меню */
+.mobile-button {
+    right: 15px;
+}

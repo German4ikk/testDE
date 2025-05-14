@@ -1,0 +1,212 @@
+/* 
+ * Стили для подвала сайта
+ */
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 50px 0 30px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo-img {
+    height: 140px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-column h4 {
+    color: var(--accent-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Улучшение видимости заголовка KONTAKTID */
+.footer-column h4[data-i18n="footer.contactTitle"] {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-contact-list li i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.footer-contact-list a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-list a:hover {
+    color: var(--accent-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-links a:before {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin: 0 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.footer-tags {
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 0 5px 8px;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    .footer-logo-img {
+        height: 100px;
+    }
+    
+    .footer-columns {
+        flex-direction: column;
+    }
+    
+    .footer-column {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        margin: 0 3px;
+    }
+    
+    .tag {
+        padding: 4px 10px;
+        margin: 0 3px 6px;
+        font-size: 11px;
+    }
+}

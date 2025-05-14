@@ -1,0 +1,96 @@
+/* 
+ * Стили для логотипа
+ */
+
+/* Фиксируем высоту шапки */
+#site-header {
+    height: 110px !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible !important;
+}
+
+#site-header-inner {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrap-inner {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#site-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+#site-logo-inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Стилизация логотипа */
+.logo-img {
+    height: 140px !important;
+    width: auto !important;
+    max-width: none !important;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    #site-header {
+        height: 120px !important;
+    }
+    
+    .logo-img {
+        height: 100px !important;
+    }
+    
+    .mobile-button {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    #main-nav {
+        top: 120px !important;
+    }
+}
+
+/* Дополнительные улучшения для логотипа */
+#site-logo-inner a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Эффект при наведении */
+.logo:hover .logo-img {
+    transform: scale(1.05);
+}

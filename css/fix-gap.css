@@ -1,0 +1,65 @@
+/* 
+ * Файл для исправления пробела над шапкой сайта
+ */
+
+/* Принудительное удаление всех отступов */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+/* Сброс отступов для всех контейнеров */
+#wrapper, #page, #site-header-wrap, #top-bar {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Фиксированное позиционирование для топ-бара */
+#top-bar {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 999 !important;
+}
+
+/* Исправление для абсолютного позиционирования шапки */
+body.site-header-absolute #site-header {
+    position: relative !important;
+    top: 0 !important;
+}
+
+/* Сброс отступов для внутренних элементов */
+#top-bar-inner, .top-bar-inner-wrap, .top-bar-content, 
+.top-bar-socials, #site-header, #site-header-inner {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Принудительное отображение верхней панели */
+#top-bar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Исправление для мобильных устройств */
+@media (max-width: 991px) {
+    #top-bar, #site-header-wrap {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    #site-header {
+        top: 0 !important;
+    }
+}
+
+/* Исправление для очень маленьких экранов */
+@media (max-width: 480px) {
+    #top-bar .top-bar-content {
+        width: 100% !important;
+        text-align: center !important;
+    }
+}

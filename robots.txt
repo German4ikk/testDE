@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://tim-bau.de/sitemap.xml
+
+# Verbot der Indexierung von Dienstdateien
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.js$
+Disallow: /*.css$

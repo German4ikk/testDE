@@ -1,0 +1,83 @@
+/* 
+ * Оптимизация CSS для улучшения SEO
+ * Этот файл содержит оптимизированные стили для ускорения загрузки страницы
+ */
+
+/* Оптимизация критического пути рендеринга */
+body {
+    display: block;
+}
+
+/* Предзагрузка шрифтов для ускорения отображения текста */
+/* Вместо полных @font-face правил используем оптимизацию загрузки шрифтов */
+
+/* Оптимизация шрифтов */
+body {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-display: swap;
+}
+
+/* Оптимизация изображений */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Оптимизация анимаций */
+.animate__animated {
+    will-change: transform, opacity;
+}
+
+/* Оптимизация для мобильных устройств */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Уменьшение размера шрифтов для мобильных устройств */
+    h1, h2 {
+        font-size: calc(1.5rem + 1vw) !important;
+    }
+    
+    h3 {
+        font-size: calc(1.2rem + 0.5vw) !important;
+    }
+    
+    p {
+        font-size: 16px !important;
+    }
+}
+
+/* Оптимизация для SEO */
+.heading, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Улучшение доступности */
+a:focus, button:focus {
+    outline: 2px solid #007bff;
+}
+
+/* Оптимизация контрастности для лучшей читаемости */
+.text-white {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Оптимизация для печати */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}

@@ -1,0 +1,70 @@
+/* Стили для улучшения видимости текста */
+
+/* Делаем заголовок и подзаголовок в разделе услуг более темным */
+.themesflat-headings .heading {
+    color: #222222;
+    font-weight: 700;
+}
+
+.themesflat-headings .sub-heading {
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Делаем иконку инструментов в разделе услуг более темной */
+.sep-icon .icon-wrap i {
+    color: #222222;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Делаем разделительные линии темнее */
+.sep-icon-before.sep-solid,
+.sep-icon-after.sep-solid {
+    background-color: #555555;
+}
+
+/* Делаем текст и иконку в разделе контактов светлее */
+#contacts .themesflat-headings .sub-heading.text-white {
+    color: #cccccc !important;
+    font-weight: 400;
+}
+
+#contacts .sep-icon .icon-wrap i {
+    color: #cccccc;
+}
+
+#contacts .sep-icon-before.sep-solid,
+#contacts .sep-icon-after.sep-solid {
+    background-color: #888888;
+}
+
+/* Делаем текст и иконку в разделе "ПОЧЕМУ ВЫБИРАЮТ МЕНЯ" светлее */
+#why-us .themesflat-headings .sub-heading.text-white {
+    color: #cccccc !important;
+    font-weight: 400;
+}
+
+#why-us .sep-icon .icon-wrap i {
+    color: #cccccc;
+}
+
+#why-us .sep-icon-before.sep-solid,
+#why-us .sep-icon-after.sep-solid {
+    background-color: #888888;
+}
+
+/* Увеличиваем контрастность для лучшей видимости на всех устройствах */
+@media screen and (max-width: 991px) {
+    .themesflat-headings .sub-heading {
+        color: #222222;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    #contacts .themesflat-headings .sub-heading.text-white {
+        color: #cccccc !important;
+        font-weight: 400;
+    }
+}

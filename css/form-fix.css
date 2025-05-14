@@ -1,0 +1,121 @@
+/* 
+ * Файл для улучшения стилей формы обратной связи
+ */
+
+/* Улучшение контрастности и читаемости формы */
+.themesflat-request-box {
+    background-color: rgba(30, 39, 46, 0.8) !important;
+    border-radius: 10px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Стилизация полей ввода */
+.wpcf7-form-control {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #333 !important;
+    padding: 12px 15px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    font-size: 15px !important;
+    width: 100% !important;
+    transition: all 0.3s ease !important;
+}
+
+.wpcf7-form-control:focus {
+    background-color: #fff !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.2) !important;
+}
+
+/* Стилизация текстовой области */
+textarea.wpcf7-form-control {
+    min-height: 120px !important;
+    resize: vertical !important;
+}
+
+/* Стилизация плейсхолдеров */
+.wpcf7-form-control::placeholder {
+    color: #777 !important;
+    opacity: 1 !important;
+}
+
+/* Стилизация кнопки отправки */
+.submit.wpcf7-form-control {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    padding: 15px 30px !important;
+    margin-top: 10px !important;
+}
+
+.submit.wpcf7-form-control:hover {
+    background-color: var(--accent-dark) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Стилизация чекбокса Telegram */
+.telegram-checkbox {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 15px !important;
+    color: #fff !important;
+}
+
+.telegram-checkbox input[type="checkbox"] {
+    margin-right: 10px !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.telegram-checkbox label {
+    color: #fff !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+}
+
+/* Стилизация бейджа Telegram */
+.telegram-badge {
+    display: flex !important;
+    align-items: center !important;
+    background-color: rgba(0, 136, 204, 0.1) !important;
+    padding: 10px 15px !important;
+    border-radius: 5px !important;
+    margin-top: 15px !important;
+    border: 1px solid rgba(0, 136, 204, 0.2) !important;
+}
+
+.telegram-badge img {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 10px !important;
+}
+
+.telegram-badge span {
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    .themesflat-request-box {
+        padding: 20px !important;
+    }
+    
+    .wpcf7-form-control {
+        padding: 10px 12px !important;
+        font-size: 14px !important;
+    }
+    
+    .submit.wpcf7-form-control {
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+    }
+}

@@ -1,0 +1,50 @@
+/* 
+ * Исправление шапки сайта
+ * Этот файл имеет наивысший приоритет для стилей шапки
+ */
+
+/* Фиксируем шапку */
+#site-header {
+    width: 100% !important;
+    height: 110px !important;
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+/* Центрируем содержимое шапки */
+#site-header-inner {
+    max-width: 1140px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* Стили для логотипа */
+.logo-img {
+    height: 140px !important;
+    width: auto !important;
+    max-width: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    #site-header {
+        height: 120px !important;
+    }
+    
+    .logo-img {
+        height: 100px !important;
+    }
+    
+    #main-nav {
+        top: 120px !important;
+    }
+}

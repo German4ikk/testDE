@@ -1,0 +1,62 @@
+/* 
+ * Стили для логотипа в подвале
+ */
+
+/* Стилизация логотипа в подвале */
+.footer-logo {
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Стили для исправления шапки */
+#site-header {
+    position: relative;
+    z-index: 100;
+}
+
+/* Исправление для навигации */
+.nav-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#mainnav {
+    position: relative;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 991px) {
+    .footer-logo-img {
+        max-height: 60px;
+    }
+    
+    #site-logo {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-logo-img {
+        max-height: 50px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        margin: 0 auto 20px;
+    }
+}

@@ -1,0 +1,415 @@
+/* Modern Style - Улучшенные стили для сайта */
+
+/* Обновленные стили для карточек услуг */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, rgba(52, 152, 219, 0.05), transparent);
+    transition: height 0.4s ease;
+    z-index: -1;
+}
+
+.service-card:hover::before {
+    height: 100%;
+}
+
+.service-icon {
+    font-size: 48px;
+    color: var(--white);
+    margin-bottom: 25px;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.25);
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.35);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover h3 {
+    color: var(--primary-dark);
+}
+
+.service-card p {
+    color: var(--light-text);
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.service-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.service-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.service-link:hover::after {
+    width: 100%;
+}
+
+.service-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(5px);
+}
+
+/* Стили для секции "Почему выбирают меня" */
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Улучшенные стили для слайдера */
+.slider-item {
+    position: relative;
+    height: 100vh;
+    min-height: 650px;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    animation-duration: 1.5s;
+}
+
+.slider-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+.slider-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    padding: 50px 0;
+    color: var(--white);
+    margin-top: 180px;
+    animation-duration: 1.5s;
+}
+
+.slider-content .subtitle {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 25px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+.slider-content .title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+}
+
+.slider-content .text {
+    font-size: 18px;
+    margin-bottom: 35px;
+    line-height: 1.7;
+    font-family: var(--font-body);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+}
+
+/* Улучшенные кнопки */
+.themesflat-button {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-family: var(--font-heading);
+}
+
+.themesflat-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+}
+
+.themesflat-button:hover::before {
+    width: 100%;
+}
+
+.themesflat-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bg-accent {
+    background: var(--gradient-accent);
+    color: var(--white);
+}
+
+/* Улучшенный хедер */
+#site-header.scrolled {
+    background-color: rgba(30, 39, 46, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#site-logo .logo-text {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+#main-nav > ul > li > a {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+#main-nav > ul > li > a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#main-nav > ul > li.current-menu-item > a:after {
+    height: 3px;
+    width: 20px;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+/* Улучшенные стили для секции "Почему выбирают меня" */
+.why-choose-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.why-choose-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.why-choose-item .icon {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.why-choose-item:hover .icon {
+    transform: scale(1.1);
+    color: var(--accent-light);
+}
+
+.why-choose-item .title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white);
+    font-family: var(--font-heading);
+}
+
+.why-choose-item .text {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+/* Улучшенная форма контактов */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+.contact-form button[type="submit"] {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 100%;
+    font-family: var(--font-heading);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+.contact-form button[type="submit"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+}
+
+/* Адаптивность */
+@media (max-width: 991px) {
+    .slider-content .title {
+        font-size: 42px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    
+    .service-card {
+        padding: 30px 25px;
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider-content .title {
+        font-size: 36px;
+    }
+    
+    .slider-content .text {
+        font-size: 16px;
+    }
+    
+    .slider-content .subtitle {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-content .title {
+        font-size: 30px;
+    }
+    
+    .themesflat-button {
+        padding: 12px 25px;
+        font-size: 13px;
+    }
+}

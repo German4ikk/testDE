@@ -1,0 +1,620 @@
+/* Contacts Section Fix */
+/* Удалили #contacts-wrapper, так как он больше не используется */
+
+/* Стили для кнопок переключения языка */
+.language-selector {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    z-index: 1000; /* Увеличиваем z-index для отображения поверх других элементов */
+}
+
+.nav-language {
+    margin-left: 15px;
+    position: relative; /* Добавляем позиционирование */
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Увеличиваем толщину границы и делаем её более заметной */
+    color: white;
+    padding: 6px 12px; /* Увеличиваем паддинги */
+    margin: 0 5px 0 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700; /* Делаем шрифт более жирным */
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Добавляем тень текста для лучшей видимости */
+}
+
+.lang-btn:last-child {
+    margin-right: 0;
+}
+
+.lang-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Добавляем свечение */
+}
+
+.lang-btn:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05); /* Небольшое увеличение при наведении */
+}
+
+/* Стили для кнопок языка в навигационном меню */
+.language-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.lang-separator {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.menu-lang-btn {
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 8px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.menu-lang-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.menu-lang-btn:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 991px) {
+    /* Стили для кнопок языка в мобильном меню */
+    .language-menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .lang-separator {
+        display: none; /* Скрываем разделитель на мобильных */
+    }
+    
+    .menu-lang-btn {
+        padding: 8px 15px;
+        margin: 0 5px;
+        font-size: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Добавляем фиксированные кнопки языка для мобильных, когда меню закрыто */
+    .mobile-lang-buttons {
+        position: fixed;
+        top: 15px;
+        right: 70px;
+        z-index: 999;
+        display: flex;
+    }
+    
+    .mobile-lang-buttons .lang-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+        margin: 0 2px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Исправление слайдера */
+.slider-item {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-item .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-content {
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider-content .title {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.slider-content .text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .slider-content .title {
+        font-size: 28px;
+    }
+    
+    .slider-content .text {
+        font-size: 16px;
+    }
+    
+    .slider-item {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-content .title {
+        font-size: 24px;
+    }
+    
+    .slider-content .text {
+        font-size: 14px;
+    }
+    
+    .slider-item {
+        min-height: 450px;
+    }
+}
+
+#contacts {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 80px 0;
+    margin: 0;
+    z-index: 1; /* Правильный z-index для наложения */
+    background-color: var(--text-color);
+    background-image: url('../images/slider-bg-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Изменили на scroll чтобы убрать эффект параллакса */
+    color: var(--white);
+    clear: both; /* Для предотвращения наложения */
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+}
+
+#contacts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 39, 46, 0.9);
+    z-index: -1;
+}
+
+#contacts .container {
+    position: relative;
+    z-index: 2;
+}
+
+#contacts .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+#contacts .col-md-12,
+#contacts .col-md-6 {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+#contacts .col-md-12 {
+    width: 100%;
+}
+
+#contacts .col-md-6 {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    #contacts .col-md-6 {
+        width: 100%;
+    }
+}
+
+/* Contact Info Box */
+.contact-info-box {
+    background-color: rgba(47, 53, 66, 0.5);
+    padding: 30px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-info-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Стили для формы контактов */
+.themesflat-request-box {
+    background-color: rgba(47, 53, 66, 0.5);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+}
+
+.contact-form-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.wpcf7-form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.wpcf7-form-control:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.wpcf7-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.wrap-submit {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="submit"].wpcf7-form-control {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: auto;
+    min-width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+input[type="submit"].wpcf7-form-control:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для статуса формы */
+.form-status {
+    padding: 12px 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+}
+
+.form-status.success {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.form-status.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Стили для плейсхолдеров */
+.wpcf7-form-control::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    font-weight: 500;
+}
+
+.wpcf7-form-control:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.wpcf7-form-control::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.telegram-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.telegram-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--accent-color);
+    width: 16px;
+    height: 16px;
+}
+
+.telegram-checkbox label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.contact-info-icon i {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.contact-info-content h4 {
+    color: var(--white);
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.contact-info-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.contact-info-content a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-info-content a:hover {
+    color: var(--white);
+}
+
+/* Contact Form */
+.themesflat-request-box {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.contact-form-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.wpcf7-form-control {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.wpcf7-form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.wpcf7-textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.wrap-submit {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.submit {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.submit:hover {
+    background-color: var(--accent-color);
+}
+
+.telegram-badge {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 10px;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.telegram-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Language Selector */
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.lang-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.lang-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.nav-language {
+    margin-left: 20px;
+}
+
+/* ThemesFlat Elements */
+.themesflat-spacer {
+    height: 0;
+    display: block;
+    width: 100%;
+}
+
+.themesflat-headings {
+    margin-bottom: 30px;
+}
+
+.themesflat-headings .heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.themesflat-headings .sub-heading {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.themesflat-headings .sep {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+}
+
+.themesflat-headings .sep.has-icon {
+    position: relative;
+}
+
+.themesflat-headings .sep-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themesflat-headings .sep-icon-before,
+.themesflat-headings .sep-icon-after {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.themesflat-headings .icon-wrap {
+    margin: 0 10px;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.themesflat-headings.text-center {
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

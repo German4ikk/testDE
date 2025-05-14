@@ -1,0 +1,177 @@
+/* 
+ * Специальный файл для исправления пробелов в мобильной версии
+ * Этот файл содержит только стили для исправления конкретных проблем
+ * ВЕРСИЯ 2.0 - радикальное удаление всех пробелов
+ */
+
+/* Все стили применяются только для мобильных устройств */
+@media (max-width: 767px) {
+    /* Убираем только зеленый пробел */
+    div[style*="background-color: green"], 
+    div[style*="background-color: #00ff00"],
+    div[style*="background: green"],
+    div[style*="background: #00ff00"] {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Убираем отступы у слайдера */
+    .slider, #rev_slider_1_1_wrapper {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Фиксированное решение для устранения пробела */
+    body.header-fixed.page.site-header-absolute {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Исправление для шапки */
+    #site-header-wrap {
+        position: relative !important;
+        margin-bottom: 0 !important;
+        background-color: #1e272e !important;
+    }
+    
+    /* Исправление для слайдера */
+    #rev_slider_1_1_wrapper, 
+    #rev_slider_1_1 {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Убираем белое пространство */
+    .themesflat-spacer {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Удаляем все возможные белые пробелы */
+    .page-content {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Удаляем белый пробел на странице */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    #wrapper, #page {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Убираем все белые блоки */
+    div[style*="background-color: white"],
+    div[style*="background-color: #ffffff"],
+    div[style*="background: white"],
+    div[style*="background: #ffffff"] {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Исправление для основного контента */
+    #main-content {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Исправление для всех секций */
+    section {
+        margin-top: 0 !important;
+    }
+    
+    /* Убираем все возможные отступы */
+    .slider-content {
+        padding-top: 0 !important;
+    }
+    
+    /* Исправление для всех контейнеров */
+    .container {
+        margin-top: 0 !important;
+    }
+    
+    /* Убираем белый фон */
+    .slider:before {
+        content: "" !important;
+        position: absolute !important;
+        top: -30px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 30px !important;
+        background-color: #1e272e !important;
+        z-index: 10 !important;
+    }
+    
+    /* Радикальное решение для удаления белого пробела */
+    #rev_slider_1_1_wrapper {
+        position: relative !important;
+        top: -1px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Удаляем любые отступы у всех элементов */
+    #site-content, #inner-content, .inner-content-wrap, #content-wrap, .site-main, #main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Дополнительное решение для белого пробела */
+    .rev_slider_wrapper.fullwidthbanner-container {
+        margin-top: -1px !important;
+    }
+    
+    /* Принудительное скрытие белого блока */
+    div#home + div, #home ~ div:not(.slider-item):not(.container):not(.row-services) {
+        display: none !important;
+        height: 0 !important;
+    }
+    
+    /* Дополнительное исправление для всех блоков */
+    * {
+        box-sizing: border-box !important;
+    }
+    
+    /* Исправление белого пробела в подвале */
+    footer, .site-footer {
+        margin-top: -1px !important;
+        padding-top: 0 !important;
+        background-color: #1e272e !important;
+    }
+    
+    /* Удаление пробела между контентом и подвалом */
+    section:last-of-type, 
+    #contacts, 
+    .row-request {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    /* Удаление всех белых пробелов перед футером */
+    div + footer, 
+    section + footer, 
+    #contacts + footer {
+        margin-top: 0 !important;
+    }
+    
+    /* Дополнительное удаление пробела в подвале */
+    .footer-widgets, 
+    .footer-content, 
+    .bottom {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}

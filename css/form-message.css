@@ -1,0 +1,75 @@
+/* 
+ * Стили для сообщений формы
+ */
+
+.form-message {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.form-message.success {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+    border: 1px solid #2ecc71;
+}
+
+.form-message.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для кнопки отправки при загрузке */
+.wpcf7-form-control.submit:disabled {
+    background-color: #7f8c8d !important;
+    cursor: not-allowed;
+}
+
+/* Улучшения для чекбокса Telegram */
+.telegram-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.telegram-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.telegram-checkbox label {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.telegram-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(0, 136, 204, 0.1);
+    border-radius: 5px;
+}
+
+.telegram-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
